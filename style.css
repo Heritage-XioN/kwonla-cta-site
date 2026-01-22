@@ -1,0 +1,255 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+background: #f7f3e9;
+font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+section{
+    margin-bottom: 4rem;
+}
+
+.logo{
+    width: 3rem;
+    height: 3rem;
+}
+
+.nav-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 20px;
+    border-bottom: 1px solid #246295;
+    background-color: #f7f3e9;
+}
+
+.nav-container{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem 2rem;
+}
+
+.hero-container{
+    padding: 0rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.hero-text-container{
+    flex: 1;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    width: 50%;
+}
+
+.hero-text{
+    font-size: 2rem;
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+.hero-image{
+    width: 35rem;
+    height: 20rem;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    opacity: 60%;
+    border-radius: 100px;
+}
+
+.nav-header{
+    color: #d1345b;
+}
+
+.form-section{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.form-container {
+background: #246295;
+border-radius: 20px;
+padding: 30px;
+width: 100%;
+max-width: 600px;
+box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+input{
+    background-color: #f7f3e9;
+}
+
+.form-header{
+    color: #f7f3e9;
+}
+
+h1 {
+text-align: center;
+margin-bottom: 10px;
+font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+.offer{
+    padding: 0rem 3rem;
+}
+
+.offer-text{
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #d1345b;
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+.offer-content{
+    border: 1px solid #246295;
+    width: 100%;
+    height: 20rem;
+    border-radius: 20px;
+    background-color: #246295;
+    margin: 1rem 0rem;
+}
+
+.subtitle {
+text-align: center;
+color: #666;
+margin-bottom: 30px;
+font-size: 16px;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+margin-bottom: 8px;
+color: #f7f3e9;
+font-weight: 500;
+font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+input, textarea, select {
+width: 100%;
+padding: 12px 15px;
+border: 2px solid #e0e0e0;
+border-radius: 10px;
+font-size: 16px;
+transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+outline: none;
+border-color: #d1345b;
+}
+
+textarea {
+min-height: 100px;
+resize: vertical;
+}
+
+.button-group {
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+button, .whatsapp-btn {
+flex: 1;
+padding: 16px;
+border: none;
+border-radius: 10px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s, box-shadow 0.2s;
+min-width: 200px;
+}
+
+.submit-btn {
+background: #d1345b;
+color: white;
+}
+
+.submit-btn:hover {
+background: #d1345b;
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgba(209, 52, 91, 0.3);
+}
+
+
+.success-message {
+display: none;
+background: #d4edda;
+color: #155724;
+padding: 15px;
+border-radius: 10px;
+margin-top: 20px;
+text-align: center;
+border: 1px solid #c3e6cb;
+}
+
+@media (max-width: 600px) {
+.hero-container{
+    justify-content: center;
+    padding: 0rem;
+}
+.hero-text-container{
+    width: 100%;
+}
+
+.hero-text{
+    font-size: 1.2rem;
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+.hero-image{
+    display: none;
+}
+.container {
+    padding: 20px;
+    margin: 10px;
+}
+
+.button-group {
+    flex-direction: column;
+}
+
+button, .whatsapp-btn {
+    min-width: 100%;
+}
+}
+
+@media (min-width: 600px) and (max-width: 1024px){
+.hero-container{
+    justify-content: center;
+    padding: 0rem;
+}
+.hero-text-container{
+    width: 100%;
+}
+.hero-image{
+    display: none;
+}
+}

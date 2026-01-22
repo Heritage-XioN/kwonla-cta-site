@@ -1,0 +1,86 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+background: #f7f3e9;
+font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+min-height: 100vh;
+padding: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container {
+background: #246295;
+border-radius: 20px;
+padding: 30px;
+width: 100%;
+max-width: 500px;
+box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1 {
+color: #f7f3e9;
+text-align: center;
+margin-bottom: 10px;
+font-size: 28px;
+font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+.button-group {
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+margin-top: 2rem;
+}
+
+button, .whatsapp-btn {
+flex: 1;
+padding: 16px;
+border: none;
+border-radius: 10px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s, box-shadow 0.2s;
+min-width: 200px;
+font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+
+.whatsapp-btn {
+background: #d1345b;
+color: white;
+gap: 10px;
+}
+
+.whatsapp-btn:hover {
+background: #d1345b;
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgba(209, 52, 91, 0.3);
+}
+
+@media (max-width: 600px) {
+.container {
+    padding: 20px;
+    margin: 10px;
+}
+
+.button-group {
+    flex-direction: column;
+}
+
+button, .whatsapp-btn {
+    min-width: 100%;
+}
+}

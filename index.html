@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WhatsApp Contact Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="nav-section">
+        <div class="nav-container">
+            <img src="assets/logo/logo3.png" class="logo" alt="Knowla logo">
+            <h1 class="nav-header">Knowla</h1>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text-container">
+                <h1 class="hero-text">
+                    Welcome to the best digital platform that serves both writers bloggers,
+                    educators, students and institutions
+                </h1>
+            </div>
+            <img src="assets/stacks-books.png" class="hero-image" alt="hero image">
+        </div>
+    </section>
+    <section class="offer">
+        <div class="offer-section">
+            <p class="offer-text">what we offer</p>
+        </div>
+        <div class="">
+            <div class="offer-content"></div>
+        </div>
+    </section>
+    <section class="form-section">
+        <div class="form-container">
+        <h1 class="form-header">Join  the VIP list</h1>
+        <p class="subtitle"></p>
+        
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">WhatsApp Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="e.g., 1234567890">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="optional@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="school">School</label>
+                <input type="text" id="school" name="school" required placeholder="FUTO">
+            </div>
+            
+            <div class="form-group">
+                <label for="role">Role</label>
+                <input type="text" id="role" name="role" required placeholder="How can we help you?"></textarea>
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="submit-btn">
+                    submit
+                </button>
+            </div>
+        </form>
+        
+        <div id="successMessage" class="success-message">
+            ✓ Message sent successfully! Opening WhatsApp...
+        </div>
+    </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
