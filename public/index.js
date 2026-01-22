@@ -8,42 +8,43 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             const school = document.getElementById('school').value;
             const role = document.getElementById('role').value;
             
-            // Format the message for WhatsApp
-            const whatsappMessage = 
-`*New Contact Form Submission*
+            // Format the message
+            const whatsappMessage = {
+                "name": name,
+                "Phone": phone,
+                "Email": email,
+                "school": school,
+                "role": role
+            }
 
-*Name:* ${name}
-*Phone:* ${phone}
-*Email:* ${email}
-*school:* ${school}
-*role:* ${role}
-
-_Sent via Contact Form_`;
-
-    // Encode the message for URL
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    
-    // Replace with your actual WhatsApp number (remove +, spaces, dashes)
-    // Example: if number is +1 (234) 567-890, use 1234567890
-    const whatsappNumber = "2348078583559"; // CHANGE THIS TO YOUR NUMBER
-    
-    // Create WhatsApp URL
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-    
-    // Show success message
-    const successDiv = document.getElementById('successMessage');
-    successDiv.style.display = 'block';
-    
-    // Open WhatsApp in new tab after a short delay
-    setTimeout(() => {
-        window.open("./success/index.html", '_blank');
-        // Reset form
-        document.getElementById('contactForm').reset();
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-            successDiv.style.display = 'none';
-        }, 5000);
-    }, 1000);
+            try {
+                // send data to api
+                async function send_message(params) {
+                    const res = await fetch("/api/send-whatsapp", {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(whatsappMessage)
+                })
+                    return res
+                }
+                send_message()
+                // Show success message
+                const successDiv = document.getElementById('successMessage');
+                successDiv.style.display = 'block';
+                
+                // open to the success page
+                setTimeout(() => {
+                    window.open("./success/index.html", "_self");
+                    // Reset form
+                    document.getElementById('contactForm').reset();
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successDiv.style.display = 'none';
+                    }, 5000);
+                }, 1000);   
+            } catch (error) {
+                // implement onces api is set
+            }       
 });
 
 // Simple phone number formatting
